@@ -1,7 +1,7 @@
     //\\\\\\\\\\\\\\\\\\\\\\\\\\\\    //\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
    //                                                                     \\
   //     Ian's Amazing first attempt at making a UI with miniscript        \\
- //	                                                                        \\
+ //	                                                                    \\
 //\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\/\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 //\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\
 //----------------------------------------------------------------------------//
@@ -27,7 +27,7 @@
     text.row = 25                                                 //      ||    |||\\ 
      print "cycle count:" + counter                              //       ||    |||||
       globals.prevCounter = counter                             //        ||    ||||| 
-	  end function                                             //         ||    |||||
+	  end function                                         //         ||    |||||
   //////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
  // enGageMenu is a function that prints the top bar on the screen for the UI     ///
 //\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\////////////////////////////////////////////////
@@ -38,8 +38,8 @@
   text.column = 1                                       //                  ///\\\
    print " Engage   |                          | " + dateTime.niceDatetime ///  \\\
     text.row = 24                                     //                  ///    \\\
-	text.column = 0                                  //                  ///      \\\
-	 print "--------------------------------------------------------------------"  //
+	text.column = 0                              //                  ///      \\\
+	 print "--------------------------------------------------------------------"  
  end function                                      //                 ///    ///////
    /////////////////////////////////////////////\\//\\\\\\\\\\\\\\/////////////////
   // clickEngage prints the actual characters for each invididual button in the\\\\
@@ -81,19 +81,19 @@
   // mInput is my attempt at a function to find out if the mouse is clicking \\\
  //   on the button "engage" or not.                                          \\\
 //\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\//////////////////////////////////////////\\\
- mInput = function	                     //////////                      ||||||||/
-  gfx.color = "#FFF52EEE"               //////////                       |||||||/
-   while not key.pressed("return")     //////////                        ||||||/
-	m = {"x": mouse.x, "y": mouse.y}  //////////                         |||||/ 
-	 if mouse.button == 1 then       //////////                          ||||/
-	 if m.x < 100 then              //////////                           |||/
-	 if m.y > 610 then             //////////                            ||/
-	  clickEngage                 //////////                             |||
-	 end if                      //////////                              |||
-     end if                     //////////                               |||
-	 end if	                   //////////                                |||
-   end while                  //////////                                 ||/
-   end function              //////////                                  ||
+ mInput = function	                     //////////                  ||||||||/
+  gfx.color = "#FFF52EEE"                   //////////                   |||||||/
+   while not key.pressed("return")         //////////                    ||||||/
+	m = {"x": mouse.x, "y": mouse.y}  //////////                     |||||/ 
+	 if mouse.button == 1 then       //////////                      ||||/
+	 if m.x < 100 then              //////////                       |||/
+	 if m.y > 610 then             //////////                        ||/
+	  clickEngage                 //////////                         |||
+	 end if                      //////////                          |||
+     end if                         //////////                           |||
+	 end if	                   //////////                            |||
+   end while                      //////////                             ||/
+   end function                  //////////                              ||
    ///////////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\|||||||
   // screenClear simply clears the screen each cycle and asks the UI|||||||
  //      to redraw the screen                                  ||||||||||||
@@ -102,7 +102,7 @@
   clear                                                //      |||||/////
    SolidColorDisplay.color = color.navy               //       ||||/////
     engageMenu                                       //        |||/////
-	mInput                                          //         ||/////
+	mInput                                      //         ||/////
  end function                                      //|         |/////
 ////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\//////////////////
 lastTime = time                                  //|||       //////
@@ -119,13 +119,13 @@ end while                                          //////
 ///////////////The End \\\\\\\\\\\\\////////////////////
 screenClear //                                   //////
 /////////////                                   //////
-		 ///				         		   //////
-        ///                     		      //////
-       ///                      			 //////
-      ///		                 			//////
-	 ///			            		   //////
-    ///				             		  //////
-   ///				                     //////
+	 ///                                   //////
+        ///                     	      //////
+       ///                      	     //////
+      ///		                    //////
+     ///			           //////
+    ///		             		  //////
+   ///	                                 //////
   ///===================================//////
  ///
 ///
